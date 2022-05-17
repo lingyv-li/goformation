@@ -34,6 +34,9 @@ type Api_Auth struct {
 
 	// AWSCloudFormationCondition stores the logical ID of the condition that must be satisfied for this resource to be created
 	AWSCloudFormationCondition string `json:"-"`
+
+	ResourcePolicy *interface{} `json:"ResourcePolicy,omitempty"`
+
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type
