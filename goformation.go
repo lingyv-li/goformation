@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"io/ioutil"
 	"strings"
-	"fmt"
 
 	"github.com/awslabs/goformation/v6/cloudformation"
 	"github.com/awslabs/goformation/v6/intrinsics"
@@ -76,7 +75,7 @@ func ParseJSONWithOptions(data []byte, options *intrinsics.ProcessorOptions) (*c
 
 func unmarshal(data []byte) (*cloudformation.Template, error) {
 	template := &cloudformation.Template{}
-	fmt.Print(string(data))
+
 	if err := json.Unmarshal(data, template); err != nil {
 		return template, err
 	}
